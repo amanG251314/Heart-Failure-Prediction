@@ -59,7 +59,7 @@ def predict():
         prediction=model.predict([[Age,Anaemia,creatinine_phosphokinase,Diabetes,ejection_fraction,high_blood_pressure,platelets,serum_creatinine,serum_sodium,sex,smoking,time]])
         output=round(prediction[0],2)
         if output==0:
-            return render_template('index.html',prediction_texts="patient not going to die!")
+            return render_template('index.html',prediction_text="patient not going to die!")
         else:
             return render_template('index.html',prediction_text="Sorry,Patient will die!")
     else:
